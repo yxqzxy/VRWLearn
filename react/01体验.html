@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <!-- 添加React的依赖 -->
+  <!-- crossorigin拿到跨域的脚本信息 脚本错误后可以在本地进行提示 -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <!-- 开始开发  -->
+  <!-- 使用jsx 必须要在script标签中加上type="text/bable" -->
+  <script type="text/babel">
+    
+    ReactDOM.render(<h2>HelloWorld</h2>, document.getElementById("app"))
+  </script>
+</body>
+
+</html>
