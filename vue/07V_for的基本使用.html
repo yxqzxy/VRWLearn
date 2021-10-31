@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <template id="zhu">
+    <div>
+      <h1>{{message}}</h1>
+      <h1 v-for="(item,index) in movies" :key="index">{{item}}+{{index}}</h1>
+      <h1 v-for="(item,index) in info" :key="index"> {{item}}+{{index}}</h1>
+    </div>
+  </template>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    Vue.createApp({
+      template: "#zhu",
+      data: function () {
+        return {
+          message: "zhuzhu",
+          movies: ["01", "02", "03", "04", "05"],
+          info: { name: "zzz", age: "13", height: 123 }
+        }
+      }
+    }).mount("#app")
+  </script>
+</body>
+
+</html>

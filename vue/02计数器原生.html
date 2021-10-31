@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 id="counter">0</h1>
+  <button id="btn1">+1</button>
+  <button id="btn2">-1</button>
+  <script>
+    //  获取元素
+    let counter = document.querySelector("#counter")
+    let btn1 = document.querySelector("#btn1")
+    let btn2 = document.querySelector("#btn2")
+
+    let counternum = parseInt(counter.innerHTML)
+    btn1.addEventListener("click", () => {
+      counternum += 1
+      counter.innerHTML = counternum
+    })
+    btn2.addEventListener("click", () => {
+      counternum -= 1
+      counter.innerHTML = counternum
+    })
+  </script>
+</body>
+
+</html>
