@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <template id="zhu">
+    <h1 v-show="store>80">分数大于90</h1>
+    <div>
+      <h1>{{message}}</h1>
+      <h1 v-if="store>90">优秀</h1>
+      <h1 v-else-if="store>60">良好</h1>
+      <h1 v-else>差评</h1>
+    </div>
+  </template>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    Vue.createApp({
+      template: "#zhu",
+      data: function () {
+        return {
+          message: "zhuzhu",
+          store: 90
+        }
+      }
+    }).mount("#app")
+  </script>
+</body>
+
+</html>
