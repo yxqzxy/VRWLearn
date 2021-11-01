@@ -1,0 +1,10 @@
+.contant{
+  font-size: 40px;
+  background-color: red;
+  color: #db601423;
+  user-select: none;
+  height:100px;
+  width: 100px;
+  background-image: url(./44.jpg);
+  background-position: center;
+}
