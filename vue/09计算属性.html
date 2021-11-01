@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <template id="zhu">
+    <div>
+      <h1>{{getChange}}</h1>
+      <h1>{{getFallNane}}</h1>
+      <h1>{{getstore}}</h1>
+    </div>
+  </template>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    Vue.createApp({
+      template: "#zhu",
+      data: function () {
+        return {
+          message: "HELLO WORLD",
+          firstName: "zhuzhu",
+          lastName: "yxq",
+          store: 89
+        }
+      },
+      computed: {
+        getChange() {
+          return this.message.split(" ").reverse().join()
+        },
+        getFallNane() {
+          return this.firstName + "" + this.lastName
+        },
+        getstore() {
+          return this.store > 60 ? "合格" : "不合格"
+        }
+      }
+    }).mount("#app")
+  </script>
+</body>
+
+</html>
