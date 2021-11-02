@@ -39,9 +39,6 @@ module.exports = {
             maxSize: 10 * 1024
           }
         }
-      },
-      {
-        test: /\./
       }
     ]
   },
