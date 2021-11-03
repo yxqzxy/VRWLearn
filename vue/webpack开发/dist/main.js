@@ -1,0 +1,1 @@
+(()=>{var o={157:o=>{o.exports={aaa:function(o){console.log(o)}}}},r={};function t(e){var s=r[e];if(void 0!==s)return s.exports;var a=r[e]={exports:{}};return o[e](a,a.exports,t),a.exports}(()=>{"use strict";const{aaa:o}=t(157);console.log(1,2),o(2)})()})();
